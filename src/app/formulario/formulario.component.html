@@ -1,0 +1,15 @@
+<form class="d-flex flex-column align-items-center" (submit)="onSubmit()">
+    <br>
+    <h1>Formulario de Envio</h1><br>
+    <div class="mb-3">
+        <label for="nombre" class="form-label">Nombre:</label>
+        <input type="text" id="nombre" [(ngModel)]="nombre" name="nombre" class="form-control">
+    </div>
+
+    <div class="mb-3">
+        <label for="email" class="form-label">Email:</label>
+        <input type="email" id="email" [(ngModel)]="email" name="email" class="form-control" required>
+    </div>
+
+    <button [disabled]="!isFormValid()" name="boton" type="submit" class="btn btn-primary">Enviar</button>
+</form>
